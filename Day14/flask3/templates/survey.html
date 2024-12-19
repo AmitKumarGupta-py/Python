@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Survey Question</title>
+</head>
+<body>
+    <h1>Survey Question</h1>
+    <form action="{{ url_for('result') }}" method="post">
+        <fieldset>
+            <legend>What is your favorite type of music?</legend>
+
+            <label>
+                <input type="checkbox" name="music" value="rock"> Rock
+            </label><br>
+            <label>
+                <input type="checkbox" name="music" value="pop"> Pop
+            </label><br>
+            <label>
+                <input type="checkbox" name="music" value="jazz"> Jazz
+            </label><br>
+            <label>
+                <input type="checkbox" name="music" value="classical"> Classical
+            </label><br>
+            <label>
+                <input type="checkbox" name="music" value="other"> Other
+            </label><br>
+
+            <input type="submit" value="Submit">
+        </fieldset>
+    </form>
+    <p><a href="{{ url_for('home') }}">Back to Home</a></p>
+</body>
+</html>
